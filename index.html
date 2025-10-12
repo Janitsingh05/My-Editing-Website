@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     
     <header>
         <nav>
-            <a href="index.html" class="logo">JANIT EDIT</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="assets.html">My Assets</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <a href="index.html" class="logo">JANIT EDIT</a>
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-links">  <li><a href="index.html">Home</a></li>
+        <li><a href="assets.html">My Assets</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
     </header>
 
     <main class="new-hero-section">
@@ -94,4 +97,25 @@
     </footer>
 
 </body>
+<script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('#nav-links');
+        const menuIconI = menuIcon.querySelector('i');
+
+        menuIcon.addEventListener('click', () => {
+            // Toggle the 'nav-active' class to show/hide the menu
+            navLinks.classList.toggle('nav-active');
+
+            // Toggle the icon between hamburger and close (X)
+            if (navLinks.classList.contains('nav-active')) {
+                menuIconI.classList.remove('fa-bars');
+                menuIconI.classList.add('fa-times');
+            } else {
+                menuIconI.classList.remove('fa-times');
+                menuIconI.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
 </html>
