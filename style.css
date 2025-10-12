@@ -14,7 +14,7 @@ body {
 
 /* Header and Navigation Bar */
 header {
-    background-color: rgba(16, 15, 28, 0.5); /* Semi-transparent */
+    background-color: rgba(16, 15, 28, 0.5);
     backdrop-filter: blur(10px);
     padding: 1rem 5%;
     position: fixed;
@@ -38,6 +38,15 @@ nav .logo {
     color: #4f46e5;
     text-decoration: none;
     letter-spacing: 1px;
+    z-index: 1001; /* Ensure logo is above the mobile menu */
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure icon is above the mobile menu */
 }
 
 nav ul {
@@ -57,7 +66,7 @@ nav ul li a:hover {
     color: #4f46e5;
 }
 
-/* ===== NEW HERO SECTION STYLING START ===== */
+/* ===== HERO SECTION STYLING ===== */
 .new-hero-section {
     min-height: 100vh;
     display: flex;
@@ -129,26 +138,13 @@ nav ul li a:hover {
     font-weight: bold;
     color: #e0e0e0;
     text-shadow: 
-        0 1px 0 #ccc, 
-        0 2px 0 #c9c9c9, 
-        0 3px 0 #bbb, 
-        0 4px 0 #b9b9b9, 
-        0 5px 0 #aaa, 
-        0 6px 1px rgba(0,0,0,.1), 
-        0 0 5px rgba(0,0,0,.1), 
-        0 1px 3px rgba(0,0,0,.3), 
-        0 3px 5px rgba(0,0,0,.2), 
-        0 5px 10px rgba(0,0,0,.25), 
-        0 10px 10px rgba(0,0,0,.2), 
+        0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 
+        0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
+        0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 
         0 20px 20px rgba(0,0,0,.15),
         /* Neon Glow Effect */
-        0 0 10px #4f46e5,
-        0 0 20px #4f46e5,
-        0 0 40px #4f46e5,
-        0 0 80px #4f46e5;
+        0 0 10px #4f46e5, 0 0 20px #4f46e5, 0 0 40px #4f46e5, 0 0 80px #4f46e5;
 }
-
-/* ===== NEW HERO SECTION STYLING END ===== */
 
 .cta-button {
     background-color: #4f46e5;
@@ -192,9 +188,22 @@ nav ul li a:hover {
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid #2a2846;
+    text-align: center; /* Center content */
 }
 
-.asset-card:hover {
+.asset-card i {
+    font-size: 3rem;
+    color: #4f46e5;
+    margin-bottom: 1rem;
+}
+
+.asset-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.asset-link:hover .asset-card {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
 }
@@ -213,7 +222,6 @@ nav ul li a:hover {
     padding: 8rem 5% 6rem;
     text-align: center;
     background-color: #0c0827;
-    min-height: 100vh;
 }
 
 .about-content {
@@ -240,13 +248,13 @@ nav ul li a:hover {
     line-height: 1.7;
     color: #cccccc;
     margin-bottom: 1.5rem;
+    text-align: left; /* Justify text for readability */
 }
 
 /* Contact Section */
 .contact-section {
     padding: 8rem 5% 4rem;
     text-align: center;
-    min-height: 90vh;
 }
 
 /* Footer & Social Links */
@@ -275,7 +283,7 @@ footer, .contact-footer {
     font-size: 0.9rem;
 }
 
-/* --- STYLES from previous build that are still needed --- */
+/* --- ASSETS PAGE SPECIFIC STYLES --- */
 .asset-pack img {
     width: 100%;
     border-radius: 8px;
@@ -330,8 +338,59 @@ footer, .contact-footer {
     cursor: pointer;
 }
 
-/* Responsive Design */
+
+/* ======================================= */
+/* ========== RESPONSIVE DESIGN ========== */
+/* ======================================= */
+
+/* Tablets and below (e.g., iPads) */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .letter-3d {
+        font-size: 200px;
+    }
+
+    .spotlight-effect {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Mobile phones and small tablets */
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul {
+        /* Mobile Menu Styling */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background-color: rgba(16, 15, 28, 0.9);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        transform: translateX(100%); /* Hide menu off-screen */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    nav ul.nav-active {
+        transform: translateX(0); /* Show menu */
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
     .hero-content-area {
         flex-direction: column;
         text-align: center;
@@ -347,20 +406,15 @@ footer, .contact-footer {
 
     .hero-graphic {
         margin-top: 2rem;
+        min-height: 300px; /* Reduce height on mobile */
     }
 
-    nav ul {
-        display: none; /* Simple hide for mobile, can be replaced with a hamburger menu */
+    .spotlight-effect {
+        width: 300px;
+        height: 300px;
     }
-}
-.asset-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit;        /* Keep text color same */
-    display: block;        /* Make it block for full-card click */
-    transition: transform 0.3s;
-}
 
-.asset-link:hover .asset-card {
-    transform: translateY(-10px); /* Keep hover effect */
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    .letter-3d {
+        font-size: 180px;
+    }
 }
