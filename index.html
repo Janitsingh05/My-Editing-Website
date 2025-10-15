@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janit | Editor Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+    <a href="index.html" class="logo">JANIT EDIT</a>
+    <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-links">  <li><a href="index.html">Home</a></li>
+        <li><a href="assets.html">My Assets</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main class="new-hero-section">
+        <div class="hero-content-area">
+            <div class="hero-text">
+                <h1>
+                    <span class="highlight">Creative & Cinematic</span>
+                    VIDEO EDITOR
+                </h1>
+                <p>Crafting visual stories with passion and precision. Welcome to my creative hub where ideas come to life through motion.</p>
+                <a href="assets.html" class="cta-button">Explore My Work</a>
+            </div>
+            <div class="hero-graphic">
+                <div class="spotlight-effect">
+                <div class="letter-3d">Janit</div>
+            </div>
+
+            </div>
+        </div>
+    </main>
+
+    <section id="assets" class="assets-section">
+        <h2>My Editing Assets</h2>
+        <div class="assets-grid">
+            <a href="assets.html" class="asset-link">
+            <div class="asset-card">
+                <i class="fa-solid fa-film" ></i>
+                <h3>Video Clips</h3>
+                <p>High-quality, ready-to-use video clips for any project.</p>
+            </div>
+            </a>
+            <a href="assets.html" class="asset-link">
+            <div class="asset-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Effects</h3>
+                <p>Stunning visual effects to make your videos stand out.</p>
+            </div>
+            </a>
+            <a href="assets.html" class="asset-link">
+            <div class="asset-card">
+                <i class="fa-solid fa-music"></i>
+                <h3>Sounds & SFX</h3>
+                <p>A library of sound effects and background music.</p>
+            </div>
+            </a>
+            <a href="assets.html" class="asset-link">
+            <div class="asset-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Overlays</h3>
+                <p>Creative overlays to add texture and style to your edits.</p>
+            </div>
+            </a>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <img src="photo.jpeg" alt="Janit's Photo" class="profile-pic">
+            <h2>About Me</h2>
+            <p>I'm Janit, a passionate video editor dedicated to creating compelling visual stories. I specialize in providing high-quality editing assets to help fellow creators bring their visions to life. Welcome to my creative space!</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Get In Touch</h2>
+        <p>Follow me on my social media platforms!</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/janit_edit_/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Janit_Edit"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/janit-singh-7255a4310/?locale=en_US"> <i class="fab fa-linkedin fa"></a>
+        </div>
+        <p class="copyright">&copy; 2025 Janit. All Rights Reserved.</p>
+    </footer>
+
+</body>
+<script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('#nav-links');
+        const menuIconI = menuIcon.querySelector('i');
+
+        menuIcon.addEventListener('click', () => {
+            // Toggle the 'nav-active' class to show/hide the menu
+            navLinks.classList.toggle('nav-active');
+
+            // Toggle the icon between hamburger and close (X)
+            if (navLinks.classList.contains('nav-active')) {
+                menuIconI.classList.remove('fa-bars');
+                menuIconI.classList.add('fa-times');
+            } else {
+                menuIconI.classList.remove('fa-times');
+                menuIconI.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
+</html>
