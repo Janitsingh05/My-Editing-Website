@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -21,4 +22,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fadeElements.forEach(element => {
         observer.observe(element);
     });
-});
