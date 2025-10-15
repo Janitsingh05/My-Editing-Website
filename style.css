@@ -32,21 +32,54 @@ nav {
     margin: 0 auto;
 }
 
+/* ADDED: Styles for the new logo structure */
 nav .logo {
+    display: flex; /* To align image and text */
+    align-items: center;
     font-size: 1.8rem;
     font-weight: 700;
     color: #4f46e5;
     text-decoration: none;
     letter-spacing: 1px;
-    z-index: 1001; /* Ensure logo is above the mobile menu */
+    z-index: 1001;
+    transition: text-shadow 0.3s;
+}
+
+nav .logo .logo-img {
+    height: 65px; /* Adjust as needed */
+    margin: right 0;
+    filter: drop-shadow(0 0 5px rgba(79, 70, 229, 0.5)); /* Initial subtle glow */
+    transition: filter 0.3s;
+}
+
+nav .logo:hover .logo-img {
+    filter: drop-shadow(0 0 25px #4f46e5); /* Enhanced glow on hover */
+}
+
+nav .logo .logo-text {
+    color: #4f46e5; /* Main text color */
+    transition: text-shadow 0.3s;
+}
+
+nav .logo .logo-text .sub-text {
+    display: block;
+    font-size: 0.8rem; /* Smaller for "Video Editor" */
+    font-weight: 500;
+    color: #ccc; /* Subtler color */
+    letter-spacing: 0.5px;
+    line-height: 1; /* Adjust spacing */
+}
+
+nav .logo:hover .logo-text {
+    text-shadow: 0 0 10px #4f46e5;
 }
 
 /* Mobile Menu Icon */
 .menu-icon {
-    display: none; /* Hidden by default on desktop */
+    display: none;
     font-size: 1.8rem;
     cursor: pointer;
-    z-index: 1001; /* Ensure icon is above the mobile menu */
+    z-index: 1001;
 }
 
 nav ul {
@@ -59,11 +92,12 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     color: #4f46e5;
+    text-shadow: 0 0 8px rgba(79, 70, 229, 0.8);
 }
 
 /* ===== HERO SECTION STYLING ===== */
@@ -137,12 +171,11 @@ nav ul li a:hover {
     font-size: 250px;
     font-weight: bold;
     color: #e0e0e0;
-    text-shadow: 
-        0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 
-        0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 
-        0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 
+    text-shadow:
+        0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2),
         0 20px 20px rgba(0,0,0,.15),
-        /* Neon Glow Effect */
         0 0 10px #4f46e5, 0 0 20px #4f46e5, 0 0 40px #4f46e5, 0 0 80px #4f46e5;
 }
 
@@ -153,13 +186,14 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     display: inline-block;
 }
 
 .cta-button:hover {
     background-color: #4338ca;
     transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.5);
 }
 
 /* Assets Section */
@@ -186,9 +220,9 @@ nav ul li a:hover {
     background-color: #1a182f;
     padding: 2rem;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     border: 1px solid #2a2846;
-    text-align: center; /* Center content */
+    text-align: center;
 }
 
 .asset-card i {
@@ -205,8 +239,10 @@ nav ul li a:hover {
 
 .asset-link:hover .asset-card {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    border-color: #4f46e5;
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.4);
 }
+
 
 .asset-card h3 {
     font-size: 1.5rem;
@@ -236,6 +272,12 @@ nav ul li a:hover {
     object-fit: cover;
     margin-bottom: 1.5rem;
     border: 3px solid #4f46e5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #4f46e5;
 }
 
 .about-section h2 {
@@ -248,39 +290,56 @@ nav ul li a:hover {
     line-height: 1.7;
     color: #cccccc;
     margin-bottom: 1.5rem;
-    text-align: left; /* Justify text for readability */
+    text-align: left;
 }
 
-/* Contact Section */
-.contact-section {
-    padding: 8rem 5% 4rem;
+/* --- FOOTER SECTION --- */
+/* MODIFIED: Changed footer styles for clarity and new effects */
+footer {
     text-align: center;
+    padding: 4rem 5% 2rem;
+    border-top: 1px solid #2a2846; /* Added a separator line */
 }
 
-/* Footer & Social Links */
-footer, .contact-footer {
-    text-align: center;
-    padding: 3rem 5% 2rem;
+footer h2 {
+    margin-bottom: 0.5rem;
 }
 
-.social-links {
+footer p {
     margin-bottom: 1.5rem;
+    color: #cccccc;
 }
 
+/* MODIFIED: Replaced old social links styles with this new, cleaner look */
 .social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #1a182f;
+    border: 1px solid #2a2846;
+    border-radius: 50%;
     color: #ffffff;
-    font-size: 1.8rem;
-    margin: 0 1rem;
-    transition: color 0.3s;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
+/* ADDED: New hover effect for social icons */
 .social-links a:hover {
-    color: #4f46e5;
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.7);
 }
 
 .copyright {
     color: #777;
     font-size: 0.9rem;
+    margin-top: 3rem; /* Added space above copyright text */
 }
 
 /* --- ASSETS PAGE SPECIFIC STYLES --- */
@@ -362,11 +421,10 @@ footer, .contact-footer {
 /* Mobile phones and small tablets */
 @media (max-width: 768px) {
     .menu-icon {
-        display: block; /* Show hamburger icon */
+        display: block;
     }
 
     nav ul {
-        /* Mobile Menu Styling */
         position: fixed;
         top: 0;
         right: 0;
@@ -379,12 +437,12 @@ footer, .contact-footer {
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
-        transform: translateX(100%); /* Hide menu off-screen */
+        transform: translateX(100%);
         transition: transform 0.4s ease-in-out;
     }
 
     nav ul.nav-active {
-        transform: translateX(0); /* Show menu */
+        transform: translateX(0);
     }
 
     nav ul li a {
@@ -406,7 +464,7 @@ footer, .contact-footer {
 
     .hero-graphic {
         margin-top: 2rem;
-        min-height: 300px; /* Reduce height on mobile */
+        min-height: 300px;
     }
 
     .spotlight-effect {
