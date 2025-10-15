@@ -22,3 +22,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fadeElements.forEach(element => {
         observer.observe(element);
     });
+    });
