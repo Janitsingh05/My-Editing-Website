@@ -489,3 +489,131 @@ main {
     /* Header ki height approx 80px hai. 100px safe hai. */
     padding-top: 100px; 
 }
+/* ADD THIS CODE AT THE END OF YOUR style.css FILE */
+
+/* --- REVIEW SYSTEM STYLES --- */
+.review-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.review-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2rem;
+    background-color: #1a182f; /* Using your existing card color */
+    border-radius: 10px;
+    border: 1px solid #2a2846;
+    margin-bottom: 2rem;
+}
+
+.average-rating-display {
+    text-align: center;
+    flex-basis: 150px;
+}
+
+.average-rating-display .score {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.average-rating-display .stars .fa-star {
+    font-size: 1.2rem;
+    color: #f59e0b; /* Bright yellow for stars */
+}
+
+.average-rating-display .total-reviews {
+    color: #cccccc;
+    margin-top: 0.5rem;
+}
+
+.rating-breakdown {
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+.rating-bar .star-label {
+    width: 30px; /* To align numbers */
+    color: #cccccc;
+}
+.rating-bar .fa-star { color: #f59e0b; }
+
+
+.progress-bar-container {
+    flex-grow: 1;
+    background-color: #2a2846;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #4f46e5; /* Using your primary accent color */
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.rating-bar .percentage {
+    width: 40px;
+    text-align: right;
+    color: #cccccc;
+}
+
+/* Star Input in Form */
+.star-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center; /* Center the stars */
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.star-input input[type="radio"] { display: none; }
+
+.star-input label {
+    font-size: 2.5rem;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-input input[type="radio"]:checked ~ label,
+.star-input label:hover,
+.star-input label:hover ~ label {
+    color: #f59e0b;
+}
+
+/* Individual Review Card */
+.review-card {
+    display: flex;
+    gap: 20px;
+    padding: 1.5rem;
+    background-color: #1a182f;
+    border-radius: 10px;
+    border: 1px solid #2a2846;
+}
+
+.review-card .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-card .review-content { flex-grow: 1; }
+.review-card .review-stars .fa-star { color: #f59e0b; }
+
+.review-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}

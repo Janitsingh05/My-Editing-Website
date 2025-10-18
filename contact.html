@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Janit</title>
+    <title>Reviews | Janit</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,190 +11,211 @@
 <body class="bg-background-dark text-text-light min-h-screen flex flex-col">
 
     <header>
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="logoo.png" alt="Janit Edit Logo" class="logo-img">
-            <span class="logo-text">JANIT EDIT <span class="sub-text">VIDEO EDITOR</span></span>
-        </a>
-        <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="assets.html">My Assets</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-    <!-- Main Content Area (Contact Form) -->
-    <main class="flex-grow">
-        <div id="messages-display"></div>
-        <section class="assets-section">
-            <div class="text-center mb-12">
-                <h1>Get In Touch</h1>
-                <p>
-                    Have a question, a project idea, or just want to collaborate? I'd love to hear from you.
-                </p>
-            </div>
-            
-            <div class="bg-card-dark p-8 md:p-12 rounded-xl shadow-2xl border border-gray-700">
-                <form action="#" class="contact-form space-y-6">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logoo.png" alt="Janit Edit Logo" class="logo-img">
+                <span class="logo-text">JANIT EDIT <span class="sub-text">VIDEO EDITOR</span></span>
+            </a>
+            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assets.html">My Assets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow review-container">
+        <section class="mb-12">
+            <div class="bg-card-dark p-8 rounded-xl shadow-2xl border border-gray-700" style="background-color: #1a182f; border: 1px solid #2a2846;">
+                <h1 class="text-3xl font-bold text-center mb-6">Leave a Review</h1>
+                <form id="review-form" class="contact-form">
+                    <div class="star-input">
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star"><i class="fas fa-star"></i></label>
+                    </div>
+
                     <div>
-                        <label for="name" class="sr-only">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required
-                               class="w-full p-4 bg-background-dark/80 border border-gray-600 rounded-lg text-text-light placeholder-gray-500 focus:ring-2 focus:ring-accent-indigo focus:border-accent-indigo transition duration-200">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div>
-                        <label for="email" class="sr-only">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required
-                               class="w-full p-4 bg-background-dark/80 border border-gray-600 rounded-lg text-text-light placeholder-gray-500 focus:ring-2 focus:ring-accent-indigo focus:border-accent-indigo transition duration-200">
+                        <input type="email" id="email" name="email" placeholder="Your Email (won't be shown)" required>
                     </div>
                     <div>
-                        <label for="message" class="sr-only">Your Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required
-                                  class="w-full p-4 bg-background-dark/80 border border-gray-600 rounded-lg text-text-light placeholder-gray-500 focus:ring-2 focus:ring-accent-indigo focus:border-accent-indigo transition duration-200"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Review" required></textarea>
                     </div>
-                    <button type="submit" 
-                            class="cta-button ">
-                        Send Message
-                    </button>
-                    <div id="status-message" class="text-center pt-4 text-sm text-green-400 hidden">
-                        <!-- Success/Error message will be displayed here -->
-                    </div>
+                    <button type="submit" class="cta-button">Submit Review</button>
+                    <div id="status-message" class="text-center pt-4 text-sm hidden"></div>
                 </form>
             </div>
-            <div class="mt-12">
-                <h2 class="text-3xl font-bold text-center mb-6">Latest Messages 💬</h2>
-                <div id="messages-display" class="space-y-4">
-                                        <p class="text-center text-gray-500" id="loading-message">Loading messages...</p>
-                </div>
-            </div>
-        </section>
-    </main>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-center mb-6">Star Rating System</h2>
+            
+            <div id="review-summary-container" class="review-summary">
+                </div>
+
+            <h2 class="text-3xl font-bold text-center mt-12 mb-6">Reviews</h2>
+            <div id="reviews-list" class="space-y-4">
+                </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer id="contact-info" class="bg-card-dark/50 py-10 border-t border-gray-700 mt-16">
+    <footer id="contact-info" class="bg-card-dark/50 py-10 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-text-light mb-3">Connect With Me</h2>
-            <p class="text-lg text-gray-400 mb-8">Follow me on my social media platforms for updates!</p>
-            
-            <!-- Social Links -->
-            <div class="social-links flex justify-center space-x-6 text-2xl mb-8">
-                <a href="https://www.instagram.com/janit_edit_/" target="_blank" aria-label="Instagram"
-                   class="text-text-light hover:text-pink-500 transition duration-300 transform hover:scale-110">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@Janit_Edit" target="_blank" aria-label="YouTube"
-                   class="text-text-light hover:text-red-500 transition duration-300 transform hover:scale-110">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/janit-singh-7255a4310/?locale=en_US" target="_blank" aria-label="LinkedIn"
-                   class="text-text-light hover:text-blue-500 transition duration-300 transform hover:scale-110">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="social-links flex justify-center space-x-6 text-2xl my-8">
+                <a href="https://www.instagram.com/janit_edit_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@Janit_Edit" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/janit-singh-7255a4310/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-
-            <p class="copyright text-sm text-gray-500 pt-4 border-t border-gray-700/50">&copy; 2025 Janit. All Rights Reserved. Built with professionalism and passion.</p>
+            <p class="copyright text-sm text-gray-500 pt-4">&copy; 2025 Janit. All Rights Reserved.</p>
         </div>
     </footer>
+
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('.contact-form');
-        const statusMessage = document.getElementById('status-message');
-        const messagesDisplay = document.getElementById('messages-display');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('review-form');
+    const statusMessage = document.getElementById('status-message');
+    const summaryContainer = document.getElementById('review-summary-container');
+    const reviewsList = document.getElementById('reviews-list');
 
-        // Function to fetch and display messages
-        const fetchMessages = async () => {
-            messagesDisplay.innerHTML = '<p class="text-center text-gray-500">Loading messages...</p>';
-            try {
-                // Fetch messages from the new PHP file
-                const response = await fetch('/api/fetchMessages');
- 
-                const data = await response.json();
+    // Helper to render star icons
+    const renderStars = (rating, size = 'fa-md') => {
+        let starsHTML = '';
+        const roundedRating = Math.round(rating);
+        for (let i = 1; i <= 5; i++) {
+            starsHTML += `<i class="fas fa-star ${i <= roundedRating ? '' : 'text-gray-500'} ${size}"></i>`;
+        }
+        return starsHTML;
+    };
 
-                if (data.success && data.messages.length > 0) {
-                    messagesDisplay.innerHTML = ''; // Clear loading message
+    const fetchReviews = async () => {
+        summaryContainer.innerHTML = '<p>Loading stats...</p>';
+        reviewsList.innerHTML = '<p>Loading reviews...</p>';
 
-                    data.messages.forEach(msg => {
-                        const messageElement = document.createElement('div');
-                        messageElement.className = 'p-4 bg-background-dark/50 border border-gray-700 rounded-lg shadow-md';
-                        
-                        // Using template literals for cleaner structure
-                        messageElement.innerHTML = `
-                            <p class="text-sm text-gray-400 mb-1"><strong>${msg.name}</strong> (${msg.email})</p>
-                            <p class="text-text-light whitespace-pre-wrap">${msg.message}</p>
-                            <p class="text-xs text-gray-500 mt-2 text-right">Sent on: ${new Date(msg.created_at).toLocaleString()}</p>
+        try {
+            const response = await fetch('/api/fetchReviews'); // Updated API endpoint
+            const result = await response.json();
+
+            if (result.success) {
+                const { data } = result;
+
+                // Render Summary Section
+                if (data.total > 0) {
+                    const breakdownHTML = [5, 4, 3, 2, 1].map(star => {
+                        const count = data.breakdown[star] || 0;
+                        const percentage = data.total > 0 ? (count / data.total) * 100 : 0;
+                        return `
+                            <div class="rating-bar">
+                                <span class="star-label">${star} <i class="fas fa-star"></i></span>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: ${percentage}%;"></div>
+                                </div>
+                                <span class="percentage">${percentage.toFixed(0)}%</span>
+                            </div>
                         `;
-                        messagesDisplay.appendChild(messageElement);
-                    });
-                } else if (data.success && data.messages.length === 0) {
-                    messagesDisplay.innerHTML = '<p class="text-center text-lg text-gray-500">No messages posted yet. Be the first! ✨</p>';
+                    }).join('');
+
+                    summaryContainer.innerHTML = `
+                        <div class="average-rating-display">
+                            <div class="score">${data.average}</div>
+                            <div class="stars">${renderStars(data.average, 'fa-lg')}</div>
+                            <div class="total-reviews">Based on ${data.total} Reviews</div>
+                        </div>
+                        <div class="rating-breakdown">
+                            ${breakdownHTML}
+                        </div>
+                    `;
                 } else {
-                    messagesDisplay.innerHTML = '<p class="text-center text-lg text-red-400">Error loading messages.</p>';
+                    summaryContainer.innerHTML = '<p>No reviews yet. Be the first!</p>';
                 }
 
-            } catch (error) {
-                console.error('Fetch error:', error);
-                messagesDisplay.innerHTML = '<p class="text-center text-lg text-red-400">Connection error: Could not fetch messages.</p>';
+                // Render Individual Reviews
+                if (data.reviews.length > 0) {
+                    reviewsList.innerHTML = '';
+                    data.reviews.forEach(review => {
+                        const reviewElement = document.createElement('div');
+                        reviewElement.className = 'review-card';
+                        reviewElement.innerHTML = `
+                            <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(review.name)}&background=4f46e5&color=fff" alt="${review.name}" class="avatar">
+                            <div class="review-content">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <h4>${review.name}</h4>
+                                    <p style="font-size: 0.8rem; color: #777;">${new Date(review.created_at).toLocaleDateString()}</p>
+                                </div>
+                                <div class="review-stars my-2" style="margin: 8px 0;">${renderStars(review.rating)}</div>
+                                <p style="color: #cccccc;">${review.message}</p>
+                            </div>
+                        `;
+                        reviewsList.appendChild(reviewElement);
+                    });
+                } else {
+                    reviewsList.innerHTML = '';
+                }
+
+            } else {
+                summaryContainer.innerHTML = `<p style="color: #ef4444;">${result.message}</p>`;
             }
+        } catch (error) {
+            console.error('Fetch error:', error);
+            summaryContainer.innerHTML = '<p style="color: #ef4444;">Could not connect to the server.</p>';
+        }
+    };
+
+    // Form Submission Handler
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+            rating: formData.get('rating')
         };
+        
+        if (!data.rating) {
+            alert('Please select a star rating.');
+            return;
+        }
 
-        // Form Submission Handler
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault(); // Stop default form submission
-            
-            const formData = new FormData(form);
-            const submitButton = form.querySelector('button[type="submit"]');
+        submitButton.textContent = 'Submitting...';
+        submitButton.disabled = true;
 
-            // Disable button and show loading state
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            statusMessage.textContent = '';
-            statusMessage.classList.add('hidden');
-
-            try {
-                // Submit data to submit.php
-                const response = await fetch('/api/submit', {
+        try {
+            const response = await fetch('/api/submitReview', { // Updated API endpoint
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                name: formData.get('name'),
-                email: formData.get('email'),
-                message: formData.get('message')
-                })
-});
+                body: JSON.stringify(data)
+            });
+            const result = await response.json();
 
-                
-                const data = await response.json();
+            statusMessage.textContent = result.message;
+            statusMessage.style.color = result.success ? '#22c55e' : '#ef4444';
+            statusMessage.classList.remove('hidden');
 
-                if (data.success) {
-                    statusMessage.textContent = data.message;
-                    statusMessage.className = 'text-center pt-4 text-sm text-green-400';
-                    form.reset(); // Clear the form
-                    fetchMessages(); // **Messages ko dobara load karein**
-                } else {
-                    statusMessage.textContent = data.message;
-                    statusMessage.className = 'text-center pt-4 text-sm text-red-400';
-                }
-
-            } catch (error) {
-                console.error('Submission error:', error);
-                statusMessage.textContent = 'Network error. Please try again.';
-                statusMessage.className = 'text-center pt-4 text-sm text-red-400';
-            } finally {
-                // Re-enable button and hide status message after a short delay
-                submitButton.textContent = 'Send Message';
-                submitButton.disabled = false;
-                statusMessage.classList.remove('hidden');
+            if (result.success) {
+                form.reset();
+                fetchReviews(); // Refresh reviews after successful submission
             }
-        });
-
-        // Load messages when the page loads
-        fetchMessages(); 
+        } catch (error) {
+            statusMessage.textContent = 'Network error. Please try again.';
+            statusMessage.style.color = '#ef4444';
+        } finally {
+            submitButton.textContent = 'Submit Review';
+            submitButton.disabled = false;
+        }
     });
+
+    fetchReviews(); // Load reviews when the page loads
+});
 </script>
 
 </body>
