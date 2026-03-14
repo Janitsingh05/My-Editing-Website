@@ -3,147 +3,506 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Assets | DEEP</title>
+    <title>My Assets | DEEP EDITS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     
-     <header>
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="logoo.png" alt="Janit Edit Logo" class="logo-img">
-            <span class="logo-text">DEEP EDIT <span class="sub-text">VIDEO EDITOR</span></span>
-        </a>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logoo.png" alt="DEEP EDIT Logo" class="logo-img">
+                <span class="logo-text">DEEP EDITS <span class="sub-text">VIDEO EDITOR</span></span>
+            </a>
             <div class="menu-icon">
-            <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </div>
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="assets.html">My Assets</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assets.html" class="active">My Assets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <!-- Hero Section for Assets -->
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1 class="glowing-text">My <span class="gradient-text">Assets</span></h1>
+                <p class="hero-description">High-quality editing resources to level up your videos</p>
+            </div>
+        </section>
+
+        <!-- Editing Packs & Effects Section -->
         <section class="assets-section">
-            <h2>Editing Packs & Effects</h2>
-            <p style="margin-bottom: 3rem; color: #ccc;">Download high-quality assets for your next big project!</p>
+            <div class="section-header">
+                <h2 class="section-title">Editing <span class="gradient-text">Packs & Effects</span></h2>
+                <p class="section-subtitle">Download high-quality assets for your next big project!</p>
+            </div>
             <div class="assets-grid">
                 <div class="asset-card asset-pack">
-                    <img src="Green Screen Overlays.gif" alt="green Screen">
-                    <h3>Green Screen Overlays</h3>
-                    <p>A collection of Green Screen Overlays </p>
-                    <a href="#" class="download-button">Download</a>
+                    <div class="card-image-wrapper">
+                        <img src="Green Screen Overlays.gif" alt="Green Screen Overlays">
+                        <div class="card-overlay">
+                            <span class="asset-type">Overlays</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Green Screen Overlays</h3>
+                        <p>A collection of premium green screen overlays for professional edits</p>
+                        <div class="card-footer">
+                            <span class="asset-count">25+ Assets</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="asset-card asset-pack">
-                    <img src="Glitch Effects.gif" alt="Glitch Effects">
-                    <h3>Glitch Effects </h3>
-                    <p>15 drag-and-drop glitch effects for a futuristic look.</p>
-                    <a href="#" class="download-button">Download</a>
+                    <div class="card-image-wrapper">
+                        <img src="Glitch Effects.gif" alt="Glitch Effects">
+                        <div class="card-overlay">
+                            <span class="asset-type">Effects</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Glitch Effects Pack</h3>
+                        <p>15 drag-and-drop glitch effects for a futuristic look</p>
+                        <div class="card-footer">
+                            <span class="asset-count">15 Assets</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="assets-section">
-            <h2>Music 🎵</h2>
-            <p style="margin-bottom: 3rem; color: #ccc;">Royalty-free tracks to set the mood.</p>
+        <!-- Music Section -->
+        <section class="assets-section alt-bg">
+            <div class="section-header">
+                <h2 class="section-title">Music <span class="gradient-text">🎵</span></h2>
+                <p class="section-subtitle">Royalty-free tracks to set the mood</p>
+            </div>
             <div class="assets-grid">
-                 <div class="asset-card asset-pack">
-                    <img src="epic.jpeg" alt="Epic Trailer Music">
-                    <h3>Epic Trailer Music</h3>
-                    <p>A pack of 5 powerful, royalty-free music tracks.</p>
-                    <a href="#" class="download-button">Download</a>
-                </div>
                 <div class="asset-card asset-pack">
-                    <img src="Lo-fi Beats.gif" alt="Lo-fi Beats Pack"> <h3>Lo-fi Beats Pack</h3>
-                    <p>10 chill, royalty-free lo-fi tracks for your vlogs.</p>
-                    <a href="#" class="download-button">Download</a>
+                    <div class="card-image-wrapper">
+                        <img src="epic.jpeg" alt="Epic Trailer Music">
+                        <div class="card-overlay">
+                            <span class="asset-type">Music</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Epic Trailer Music</h3>
+                        <p>A pack of 5 powerful, royalty-free music tracks</p>
+                        <div class="card-footer">
+                            <span class="asset-count">5 Tracks</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asset-card asset-pack">
+                    <div class="card-image-wrapper">
+                        <img src="Lo-fi Beats.gif" alt="Lo-fi Beats Pack">
+                        <div class="card-overlay">
+                            <span class="asset-type">Music</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lo-fi Beats Pack</h3>
+                        <p>10 chill, royalty-free lo-fi tracks for your vlogs</p>
+                        <div class="card-footer">
+                            <span class="asset-count">10 Tracks</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Overlays Section -->
         <section class="assets-section">
-            <h2>Overlays ✨</h2>
-            <p style="margin-bottom: 3rem; color: #ccc;">Add texture and style to your videos.</p>
-            <div class="assets-grid">
-                <div class="asset-card asset-pack">
-                    <img src="Film Burn Overlays.jpg" alt="Film Burn Overlays">
-                    <h3>Film Burn Overlays</h3>
-                    <p>Add a vintage, retro feel with these film burn textures.</p>
-                    <a href="#" class="download-button">Download</a>
-                </div>
-                 <div class="asset-card asset-pack">
-                    <img src="Ink Overlays.jpeg" alt="Light Leaks"> <h3>Ink Overlays</h3>
-                    <p> Ink Overlaysleak effects with diffents types of ink.</p>
-                    <a href="#" class="download-button">Download</a>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Overlays <span class="gradient-text">✨</span></h2>
+                <p class="section-subtitle">Add texture and style to your videos</p>
             </div>
-        </section>
-        
-        <section class="assets-section">
-            <h2>Sound Effects 🔊</h2>
-            <p style="margin-bottom: 3rem; color: #ccc;">Crucial sound effects for dynamic editing.</p>
             <div class="assets-grid">
                 <div class="asset-card asset-pack">
-                    <img src="whoosh-sfx.gif" alt="Whoosh SFX"> <h3>Whoosh SFX Pack</h3>
-                    <p>A collection of 50 whoosh and swoosh sound effects.</p>
-                    <a href="#" class="download-button">Download</a>
+                    <div class="card-image-wrapper">
+                        <img src="Film Burn Overlays.jpg" alt="Film Burn Overlays">
+                        <div class="card-overlay">
+                            <span class="asset-type">Overlays</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Film Burn Overlays</h3>
+                        <p>Add a vintage, retro feel with these film burn textures</p>
+                        <div class="card-footer">
+                            <span class="asset-count">20+ Overlays</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="asset-card asset-pack">
-                    <img src="ui-sounds.gif" alt="UI Sounds"> <h3>UI & Interface Sounds</h3>
-                    <p>Essential clicks, pops, and notification sounds.</p>
-                    <a href="#" class="download-button">Download</a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="assets-section">
-            <h2>Movie Clips 🎬</h2>
-            <p style="margin-bottom: 3rem; color: #ccc;">High-quality stock footage and movie clips.</p>
-            <div class="assets-grid">
-                <div class="asset-card asset-pack">
-                    <img src="nature-clips.gif" alt="Nature Clips"> <h3>4K Nature Clips</h3>
-                    <p>A pack of 10 stunning, royalty-free nature clips.</p>
-                    <a href="#" class="download-button">Download</a>
-                </div>
-                <div class="asset-card asset-pack">
-                    <img src="Tech Backgrounds.gif" alt="Tech Backgrounds"> <h3>Abstract Tech Backgrounds</h3>
-                    <p>Looping video backgrounds for your tech projects.</p>
-                    <a href="#" class="download-button">Download</a>
+                    <div class="card-image-wrapper">
+                        <img src="Ink Overlays.jpeg" alt="Ink Overlays">
+                        <div class="card-overlay">
+                            <span class="asset-type">Overlays</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ink Overlays</h3>
+                        <p>Ink overlay effects with different types of ink textures</p>
+                        <div class="card-footer">
+                            <span class="asset-count">15 Overlays</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Sound Effects Section -->
+        <section class="assets-section alt-bg">
+            <div class="section-header">
+                <h2 class="section-title">Sound Effects <span class="gradient-text">🔊</span></h2>
+                <p class="section-subtitle">Crucial sound effects for dynamic editing</p>
+            </div>
+            <div class="assets-grid">
+                <div class="asset-card asset-pack">
+                    <div class="card-image-wrapper">
+                        <img src="whoosh-sfx.gif" alt="Whoosh SFX">
+                        <div class="card-overlay">
+                            <span class="asset-type">SFX</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Whoosh SFX Pack</h3>
+                        <p>A collection of 50 whoosh and swoosh sound effects</p>
+                        <div class="card-footer">
+                            <span class="asset-count">50 Sounds</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asset-card asset-pack">
+                    <div class="card-image-wrapper">
+                        <img src="ui-sounds.gif" alt="UI Sounds">
+                        <div class="card-overlay">
+                            <span class="asset-type">SFX</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>UI & Interface Sounds</h3>
+                        <p>Essential clicks, pops, and notification sounds</p>
+                        <div class="card-footer">
+                            <span class="asset-count">30 Sounds</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie Clips Section -->
+        <section class="assets-section">
+            <div class="section-header">
+                <h2 class="section-title">Movie Clips <span class="gradient-text">🎬</span></h2>
+                <p class="section-subtitle">High-quality stock footage and clips</p>
+            </div>
+            <div class="assets-grid">
+                <div class="asset-card asset-pack">
+                    <div class="card-image-wrapper">
+                        <img src="nature-clips.gif" alt="Nature Clips">
+                        <div class="card-overlay">
+                            <span class="asset-type">Footage</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>4K Nature Clips</h3>
+                        <p>A pack of 10 stunning, royalty-free nature clips</p>
+                        <div class="card-footer">
+                            <span class="asset-count">10 Clips</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="asset-card asset-pack">
+                    <div class="card-image-wrapper">
+                        <img src="Tech Backgrounds.gif" alt="Tech Backgrounds">
+                        <div class="card-overlay">
+                            <span class="asset-type">Backgrounds</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Abstract Tech Backgrounds</h3>
+                        <p>Looping video backgrounds for your tech projects</p>
+                        <div class="card-footer">
+                            <span class="asset-count">8 Backgrounds</span>
+                            <a href="#" class="download-button">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <!-- Footer -->
-    <footer id="contact-info" class="bg-card-dark/50 py-10 border-t border-gray-700 mt-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-text-light mb-3">Connect With Me</h2>
-            <p class="text-lg text-gray-400 mb-8">Follow me on my social media platforms for updates!</p>
-            
+    <footer>
+        <div class="footer-content">
+            <h2 class="gradient-text">Connect With Me</h2>
+            <p class="footer-description">Follow me on my social media platforms for updates!</p>
+
             <!-- Social Links -->
-            <div class="social-links flex justify-center space-x-6 text-2xl mb-8">
-                <a href="https://www.instagram.com/karandeep_0708/" target="_blank" aria-label="Instagram"
-                   class="text-text-light hover:text-pink-500 transition duration-300 transform hover:scale-110">
+            <div class="social-links">
+                <a href="https://www.instagram.com/karandeep_0708/" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.youtube.com/@deepedits07" target="_blank" aria-label="YouTube"
-                   class="text-text-light hover:text-red-500 transition duration-300 transform hover:scale-110">
+                <a href="https://www.youtube.com/@DeepEdit07" target="_blank" aria-label="YouTube">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <a href="https://linkedin.com/in/karandeep-singh-18a53236b/?locale=en_US" target="_blank" aria-label="LinkedIn"
-                   class="text-text-light hover:text-blue-500 transition duration-300 transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/karandeep-singh-18a53236b?locale=en_US" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
 
-            <p class="copyright text-sm text-gray-500 pt-4 border-t border-gray-700/50">&copy; 2025 Karandeep Singh. All Rights Reserved. Built with professionalism and passion.</p>
+            <p class="copyright">&copy; 2025 Karandeep Singh. All Rights Reserved. Built with professionalism and passion.</p>
         </div>
     </footer>
 
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('#nav-links');
+        const menuIconI = menuIcon.querySelector('i');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            
+            if (navLinks.classList.contains('nav-active')) {
+                menuIconI.classList.remove('fa-bars');
+                menuIconI.classList.add('fa-times');
+            } else {
+                menuIconI.classList.remove('fa-times');
+                menuIconI.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                menuIconI.classList.remove('fa-times');
+                menuIconI.classList.add('fa-bars');
+            });
+        });
+    </script>
+
+    <!-- Add these styles to your style.css file if not already present -->
+    <style>
+        /* Additional styles specific to assets page */
+        .page-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(10,10,10,0.9) 0%, rgba(26,26,26,0.95) 100%);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(240, 185, 11, 0.1) 0%, transparent 50%);
+            animation: rotateBg 20s linear infinite;
+            top: -25%;
+            left: -25%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .glowing-text {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 20px rgba(240, 185, 11, 0.3);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #f0b90b, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShift 5s ease infinite;
+        }
+
+        .alt-bg {
+            background: linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(26,26,26,0.8) 100%);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .asset-card:hover .card-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(45deg, #f0b90b, #ff6b6b);
+            padding: 0.5rem 1rem;
+            border-radius: 0 15px 0 15px;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+        }
+
+        .asset-card:hover .card-overlay {
+            transform: translateY(0);
+        }
+
+        .asset-type {
+            color: #000;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .asset-count {
+            color: #f0b90b;
+            font-weight: 600;
+            font-size: 0.9rem;
+            background: rgba(240, 185, 11, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-description {
+            color: #aaa;
+            margin: 1rem 0 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .glowing-text {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .card-footer {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .download-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .glowing-text {
+                font-size: 2.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </body>
 </html>
