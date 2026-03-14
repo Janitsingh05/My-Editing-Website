@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,6 +140,35 @@
             letter-spacing: 1px;
         }
 
+        /* New GitHub Commit Link Button */
+        .github-commit-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(240, 185, 11, 0.3);
+            color: #f0b90b;
+            font-weight: 500;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 10px 0 20px;
+            transition: all 0.3s;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .github-commit-btn i {
+            margin-right: 8px;
+            color: #f0b90b;
+        }
+
+        .github-commit-btn:hover {
+            background: rgba(240, 185, 11, 0.15);
+            border-color: #f0b90b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(240, 185, 11, 0.3);
+        }
+
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -265,6 +293,11 @@
             <!-- Portfolio Button -->
             <a href="https://karandeep3100.github.io/karan/" target="_blank" class="portfolio-btn">
                 <i class="fas fa-briefcase"></i> View My Portfolio
+            </a>
+
+            <!-- New GitHub Commit Link -->
+            <a href="https://github.com/Janitsingh05/My-Editing-Website/commit/bd9a24ac41bc1830ac162755b0621e577d140925" target="_blank" class="github-commit-btn">
+                <i class="fab fa-github"></i> Latest Updates on GitHub
             </a>
 
             <!-- Social Links -->
